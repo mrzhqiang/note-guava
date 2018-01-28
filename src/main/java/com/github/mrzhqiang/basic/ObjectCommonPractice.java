@@ -17,7 +17,7 @@ final class ObjectCommonPractice {
      * Simplify implementing Object methods, like hashCode() and toString().
      * */
 
-    PREFIX = "Object common methods";
+    PREFIX = "ObjectCommonPractice";
     // 1. equals
     show(Objects.equal("a", "a"));
     show(Objects.equal(null, "a"));
