@@ -9,7 +9,7 @@ import static com.google.common.base.Preconditions.*;
 /**
  * <a href="https://github.com/google/guava/wiki/PreconditionsExplained">PreconditionsExplained</a>
  */
-final class PreconditionsExplained {
+final class PreconditionsPractice {
 
   public static void main(String[] args) {
     /*

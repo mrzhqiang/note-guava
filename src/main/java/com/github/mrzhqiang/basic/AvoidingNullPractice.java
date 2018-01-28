@@ -12,7 +12,7 @@ import static com.github.mrzhqiang.Main.*;
 /**
  * <a href="https://github.com/google/guava/wiki/UsingAndAvoidingNullExplained">UsingAndAvoidingNullExplained</a>
  */
-final class AvoidingNull {
+final class AvoidingNullPractice {
 
   public static void main(String[] args) {
     /*

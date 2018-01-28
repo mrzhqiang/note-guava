@@ -1,10 +1,8 @@
 package com.github.mrzhqiang.basic;
 
 import com.github.mrzhqiang.data.Person;
-import com.google.common.base.MoreObjects;
+import com.github.mrzhqiang.data.SimplePerson;
 import com.google.common.base.Objects;
-import com.google.common.collect.ComparisonChain;
-import javax.annotation.Nonnull;
 
 import static com.github.mrzhqiang.Main.PREFIX;
 import static com.github.mrzhqiang.Main.show;
@@ -12,7 +10,7 @@ import static com.github.mrzhqiang.Main.show;
 /**
  * <a href="https://github.com/google/guava/wiki/CommonObjectUtilitiesExplained">CommonObjectUtilitiesExplained</a>
  */
-final class ObjectCommon {
+final class ObjectCommonPractice {
 
   public static void main(String[] args) {
     /*
@@ -53,29 +51,4 @@ final class ObjectCommon {
     * */
   }
 
-  static final class SimplePerson extends Person implements Comparable<SimplePerson> {
-
-    private SimplePerson(@Nonnull Person person) {
-      super(person.name, person.age);
-    }
-
-    public static Person newRandom(int size) {
-      return new SimplePerson(Person.random(size));
-    }
-
-    @Override public String toString() {
-      return MoreObjects.toStringHelper(this)
-          .add("name", name)
-          .add("age", age)
-          .toString();
-    }
-
-    @Override public int compareTo(SimplePerson o) {
-      // 内部的实现，令人眼前一亮
-      return ComparisonChain.start()
-          .compare(this.name, o.name)
-          .compare(this.age, o.age)
-          .result();
-    }
-  }
 }
